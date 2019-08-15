@@ -19,12 +19,15 @@ console.log('Hello World from Webpacker')
 
 import Vue from 'vue'
 import App from '../app.vue'
+import router from '../router'
+import store from '../store'
 
 document.addEventListener('DOMContentLoaded', () => {
+  const el = document.body.appendChild(document.createElement('root'))
   const app = new Vue({
+    el,
+    router,
+    store,
     render: h => h(App)
-  }).$mount()
-  document.body.appendChild(app.$el)
-
-  console.log(app)
+  })
 })

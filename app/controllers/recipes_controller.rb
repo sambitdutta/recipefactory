@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    response = File.read(Rails.root.join('spec', 'dummy', 'sample_response.json'))
-    render json: JSON.parse(response)
+    params[:page] ||= 1
+    render json: Contentful::Entries.new.fetch({ content_type: 'recipe', skip: (params[:page] - 1) * 100 })
   end
 end
