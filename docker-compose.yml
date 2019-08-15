@@ -16,6 +16,8 @@ services:
         precompileassets: 'no'
     links:
       - webpacker
+    depends_on:
+      - webpacker  
     ports:
       - 3000:3000
     command: ["./scripts/start_rails.sh"]
