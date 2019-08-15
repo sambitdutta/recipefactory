@@ -1,0 +1,17 @@
+{
+  "name": "recipefactory",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^4.0.7",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.1",
+    "vue-router": "^3.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.8.0"
+  }
+}
